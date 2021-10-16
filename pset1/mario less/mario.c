@@ -18,11 +18,6 @@ int main(void)
         // each line
         printf("%*s", height - i - 1, ""); // trick to save a for loop
 
-        for (int j = 0; j <= i; j++)
-        {
-            printf("#");
-        }
-        printf("  ");
         for (int k = 0; k <= i; k++)
         {
             printf("#");
