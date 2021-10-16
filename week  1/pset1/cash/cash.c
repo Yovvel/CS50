@@ -2,7 +2,7 @@
 #include <cs50.h>
 #include <math.h>
 
-int main (void)
+int main(void)
 {
     // global variables
     float dollars;
@@ -14,35 +14,31 @@ int main (void)
     {
         dollars = get_float("Change owed: ");
     }
-    while(dollars <= 0);
+    while (dollars <= 0);
 
+    // fix for floating point error
     int cents = round(dollars * 100);
-    while(cents > 0)
+
+    // see how many coins fit in the change
+    while (cents > 0)
     {
-        if(cents - 25 >= 0)
+        if (cents - 25 >= 0)
         {
             cents = cents - 25;
-            coins++;
-            printf("%i coins, %i cents\n", coins, cents);
         }
-        else if(cents - 10 >= 0)
+        else if (cents - 10 >= 0)
         {
             cents = cents - 10;
-            coins++;
-            printf("%i coins, %i cents\n", coins, cents);
         }
-        else if(cents - 5 >= 0)
+        else if (cents - 5 >= 0)
         {
             cents = cents - 5;
-            coins++;
-            printf("%i coins, %i cents\n", coins, cents);
         }
-        else if(cents - 1 >= 0)
+        else if (cents - 1 >= 0)
         {
             cents = cents - 1;
-            coins++;
-            printf("%i coins, %i cents\n", coins, cents);
         }
+        coins++;
     }
     printf("%i\n", coins);
 }
