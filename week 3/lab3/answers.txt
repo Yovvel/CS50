@@ -1,0 +1,28 @@
+sort1 uses: Bubble Sort
+
+How do you know?: takes much less time on a sorted list compared to a random or reversed list. Bubble sort only have to check each number once when it is already in order.
+
+sort2 uses: Merge Sort
+
+How do you know?: Is the fastest one.
+
+sort3 uses: Selection Sort
+
+How do you know?: Takes lot of time even when running on sorted text, because it has to check the data for each number seperately.
+
+
+sort1
+random 50 000: 20 seconden
+sorted 50 000: 2 sec
+reversed 50 000: 17 sec
+
+sort2 merge sort
+random 50 000: 2 sec
+sorted 50 000: 2 sec
+reversed 50 000: 3 sec
+
+sort3 selection sort
+random 50 000: 9 sec
+sorted 50 000: 10 sec
+reversed 50 000: 17 sec
+
